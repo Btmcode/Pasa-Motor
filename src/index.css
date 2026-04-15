@@ -162,6 +162,7 @@ html {
   position: relative;
 }
 
+
 .hero-image-wrapper {
   position: relative;
   width: 100%;
@@ -172,13 +173,42 @@ html {
 .hero-image-wrapper img {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 20px 40px rgba(255, 215, 0, 0.25));
-  animation: hero-float 6s ease-in-out infinite;
+  filter: drop-shadow(0 20px 40px rgba(255, 215, 0, 0.4));
 }
 
 @keyframes hero-float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes hero-logo-intro {
+  0% { 
+    transform: scale(0) rotate(-360deg); 
+    opacity: 0; 
+    filter: blur(10px) brightness(0.5);
+  }
+  50% { 
+    transform: scale(1.5) rotate(0deg); 
+    opacity: 1;
+    filter: blur(0) brightness(1.2);
+  }
+  65% { 
+    transform: scale(0.9); 
+  }
+  80% { 
+    transform: scale(1.2); 
+  }
+  100% { 
+    transform: scale(1); 
+  }
+}
+
+.animate-hero-intro {
+  animation: hero-logo-intro 1.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+}
+
+.animate-hero-float {
+  animation: hero-float 6s ease-in-out infinite;
 }
 
 .hero-glow {
@@ -231,3 +261,4 @@ html {
   0%, 100% { transform: translateY(0) scale(1.1); }
   50% { transform: translateY(-5px) scale(1.1); }
 }
+

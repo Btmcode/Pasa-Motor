@@ -47,9 +47,8 @@ const HeroSection = () => {
           </div>
 
           <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 animate-fade-in text-foreground" style={{ animationDelay: "0.1s" }}>
-            İstanbul'un Güvenilir{" "}
-            <span className="gradient-text">Motosiklet</span>{" "}
-            Yetkili Bayii
+            İstanbul’da Güvenilir <br />
+            <span className="gradient-text">Motosiklet</span> Yetkili Servis Bayisi
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
@@ -89,14 +88,20 @@ const HeroSection = () => {
         </div>
         
         {/* Logo Section */}
-        <div className="hero-visual hidden lg:flex justify-center relative w-full h-[400px]">
+        <div className="hero-visual hidden lg:flex justify-center relative w-full h-[500px]">
           <div className="hero-glow"></div>
-          <div className="hero-image-wrapper">
+          <div className="hero-image-wrapper flex items-center justify-center">
             <img
               src="/images/logo.png"
               alt="Paşa Motor Logo"
-              className="w-full max-w-[480px] h-auto object-contain z-10 relative drop-shadow-2xl"
-              style={{ filter: "drop-shadow(0 20px 40px rgba(255, 215, 0, 0.4))" }}
+              className="w-full max-w-[520px] h-auto object-contain z-10 relative drop-shadow-2xl animate-hero-intro"
+              onAnimationEnd={(e) => {
+                e.currentTarget.classList.remove('animate-hero-intro');
+                e.currentTarget.classList.add('animate-hero-float');
+              }}
+              style={{ 
+                filter: "drop-shadow(0 20px 50px rgba(255, 215, 0, 0.5))",
+              }}
             />
           </div>
         </div>
