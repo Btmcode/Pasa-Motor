@@ -21,8 +21,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group transition-transform duration-300 active:scale-95">
-            <div className="relative p-1.5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg shadow-black/10 group-hover:border-white/40 transition-all overflow-hidden lg:h-14 lg:w-14 h-12 w-12 flex items-center justify-center">
+            <div className="relative p-1.5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg shadow-black/10 group-hover:border-white/40 transition-all lg:h-14 lg:w-14 h-12 w-12 flex items-center justify-center">
               <img src={logo} alt="Paşa Motor" className="h-full w-auto object-contain drop-shadow-md brightness-110 contrast-110 scale-110" />
+              <div className="oil-drop"></div>
             </div>
             <div className="flex flex-col">
               <span className="font-heading font-extrabold text-lg md:text-xl tracking-tight leading-none text-foreground group-hover:text-primary transition-colors">
