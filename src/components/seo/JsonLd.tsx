@@ -33,8 +33,8 @@ export const motorcycleDealerSchema = {
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: "41.00735248438084",
-        longitude: "28.936746750345762",
+        latitude: "41.0072108",
+        longitude: "28.9364678",
       },
       brand: [
         { "@type": "Brand", name: "TVS" },

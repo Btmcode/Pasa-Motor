@@ -35,7 +35,7 @@ const Iletisim = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", phone: "", subject: "", message: "" });
   
-  const position: [number, number] = [41.00735248438084, 28.936746750345762];
+  const position: [number, number] = [41.0072108, 28.9364678];
   
   const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${position[0]},${position[1]}`;
 
