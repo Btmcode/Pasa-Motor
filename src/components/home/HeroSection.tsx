@@ -89,7 +89,13 @@ const HeroSection = () => {
         
         {/* Logo Section */}
         <div className="hero-visual hidden lg:flex justify-center relative w-full h-[500px]">
-          <div className="hero-glow"></div>
+          <div 
+            className="hero-glow animate-glow-sync"
+            onAnimationEnd={(e) => {
+              e.currentTarget.classList.remove('animate-glow-sync');
+              e.currentTarget.style.opacity = '0.2';
+            }}
+          ></div>
           <div className="hero-image-wrapper flex items-center justify-center">
             <img
               src="/images/logo.png"

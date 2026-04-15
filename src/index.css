@@ -59,15 +59,19 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border) / 0.1);
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    font-family: 'Outfit', sans-serif;
   }
 }
 
@@ -182,43 +186,60 @@ html {
   50% { transform: translateY(-15px); }
 }
 
-@keyframes tornado-whirlwind {
+@keyframes senior-tornado {
   0% { 
-    transform: scale(0) rotateY(-1800deg) translateY(200px); 
+    transform: scale(0.6) rotateY(0deg) translateY(0); 
     opacity: 0; 
-    filter: blur(20px) brightness(3);
+    filter: blur(20px) brightness(2);
   }
-  30% { 
-    transform: scale(0.9) rotateY(-900deg) translateY(0) skewX(-10deg); 
+  /* Anticipation */
+  10% {
+    transform: scale(0.5) rotateY(-45deg) translateY(10px);
+    opacity: 0.2;
+  }
+  /* Tornado Whirlwind */
+  40% { 
+    transform: scale(1.6) rotateY(1800deg) translateY(-20px) skewY(-5deg); 
     opacity: 1;
-    filter: blur(5px) brightness(1.5);
+    filter: blur(8px) brightness(1.8);
   }
-  45% { 
-    transform: scaleY(1.8) scaleX(0.7) rotateY(-450deg) skewX(10deg); 
-  }
+  /* The Impact (Kocaman) */
   50% {
-    transform: scale(3.5) rotateY(0deg) skewX(0deg);
-    filter: blur(0) brightness(1.5);
-    drop-shadow: 0 0 100px rgba(255, 215, 0, 0.9);
+    transform: scale(3.5) rotateY(1800deg) skewY(0deg);
+    filter: blur(0) brightness(2);
+    drop-shadow: 0 0 120px rgba(255, 215, 0, 1);
   }
+  /* Asymmetric Recovery */
   65% { 
-    transform: scale(0.6); 
+    transform: scale(0.65) rotateY(1800deg); 
     filter: brightness(1);
   }
   80% { 
-    transform: scale(1.3); 
+    transform: scale(1.3) rotateY(1800deg); 
   }
   90% { 
-    transform: scale(0.95); 
+    transform: scale(0.95) rotateY(1800deg); 
   }
   100% { 
-    transform: scale(1); 
+    transform: scale(1) rotateY(1800deg); 
   }
 }
 
+@keyframes glow-sync {
+  0%, 40% { transform: translate(-50%, -50%) scale(1); opacity: 0.2; }
+  50% { transform: translate(-50%, -50%) scale(2.5); opacity: 1; filter: brightness(2); }
+  65% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.3; }
+  80% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0.2; }
+}
+
 .animate-hero-intro {
-  animation: tornado-whirlwind 3s cubic-bezier(0.23, 1, 0.32, 1) forwards !important;
+  animation: senior-tornado 3.5s cubic-bezier(0.23, 1, 0.32, 1) forwards !important;
   transform-origin: center center;
+}
+
+.animate-glow-sync {
+  animation: glow-sync 3.5s cubic-bezier(0.23, 1, 0.32, 1) forwards !important;
 }
 
 .animate-hero-float {
