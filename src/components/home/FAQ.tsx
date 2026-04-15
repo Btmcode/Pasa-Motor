@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: "Adresiniz nerede?",
-    answer: "Showroom ve servisimiz Kızılelma Cad. No:66/A K.M.Paşa - Fatih/İstanbul adresindedir.",
+    answer: "Showroom ve servisimiz Seyyid Ömer, Kızılelma Cd. No:66, 34098 Fatih/İstanbul adresindedir.",
   },
 ];
 

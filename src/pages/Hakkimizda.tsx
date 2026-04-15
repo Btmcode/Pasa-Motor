@@ -48,7 +48,7 @@ const Hakkimizda = () => {
             </p>
             <h2 className="font-heading font-bold text-2xl text-foreground mb-4">Yetkili Bayii</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Nihat KAN liderliğinde faaliyet gösteren Paşa Motor, Kızılelma Caddesi üzerindeki showroom ve servis merkeziyle sizlere hizmet vermektedir. Orijinal yedek parça garantisi ve uzman teknik kadromuzla motosikletiniz emin ellerdedir.
+              Nihat KAN liderliğinde faaliyet gösteren Paşa Motor, Seyyid Ömer, Kızılelma Cd. No:66, 34098 Fatih/İstanbul adresindeki showroom ve servis merkeziyle sizlere hizmet vermektedir. Orijinal yedek parça garantisi ve uzman teknik kadromuzla motosikletiniz emin ellerdedir.
             </p>
           </div>
         </div>

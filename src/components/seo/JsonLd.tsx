@@ -25,16 +25,16 @@ export const motorcycleDealerSchema = {
       email: "pasamotor@gmail.com",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Kızılelma Cad. No:66/A",
+        streetAddress: "Seyyid Ömer, Kızılelma Cd. No:66",
         addressLocality: "Fatih",
         addressRegion: "İstanbul",
-        postalCode: "34104",
+        postalCode: "34098",
         addressCountry: "TR",
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: "41.0085",
-        longitude: "28.9265",
+        latitude: "41.00735248438084",
+        longitude: "28.936746750345762",
       },
       brand: [
         { "@type": "Brand", name: "TVS" },
