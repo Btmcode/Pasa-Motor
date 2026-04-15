@@ -57,6 +57,7 @@
 
     /* Design tokens */
     --oil-color: #3d2b1f;
+    --oil-highlight: #c9a84c;
   }
 }
 
@@ -138,52 +139,53 @@ html {
    ======================================== */
 .oil-drop {
   position: absolute;
-  bottom: 0;
+  top: 60%;
   left: 50%;
   transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
-  background: var(--oil-color);
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle at 30% 30%, var(--oil-highlight) 0%, var(--oil-color) 60%, black 100%);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
-  z-index: 20;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5), 0 0 5px var(--oil-highlight);
 }
 
 @keyframes oil-drip {
   0% {
-    bottom: 10px;
-    width: 4px;
-    height: 4px;
+    top: 60%;
+    width: 6px;
+    height: 6px;
     opacity: 0;
     transform: translateX(-50%) scale(1);
-    border-radius: 50% 50% 50% 50%;
+    border-radius: 50%;
   }
-  30% {
-    bottom: 4px;
-    width: 8px;
-    height: 8px;
+  20% {
+    top: 75%;
+    width: 10px;
+    height: 10px;
     opacity: 1;
     border-radius: 50% 50% 80% 80%;
   }
-  50% {
-    bottom: 0px;
-    width: 6px;
-    height: 12px;
+  40% {
+    top: 90%;
+    width: 8px;
+    height: 14px;
     opacity: 1;
-    border-radius: 40% 40% 90% 90%;
+    border-radius: 40% 40% 95% 95%;
   }
   100% {
-    bottom: -60px;
-    width: 4px;
-    height: 10px;
+    top: 250px;
+    width: 6px;
+    height: 12px;
     opacity: 0;
-    transform: translateX(-50%) scale(0.5);
+    transform: translateX(-50%) scale(0.4);
   }
 }
 
 .group:hover .oil-drop {
-  animation: oil-drip 1.5s cubic-bezier(0.6, 0.04, 0.98, 0.33) infinite;
+  animation: oil-drip 2s cubic-bezier(0.5, 0, 0.75, 0) infinite;
 }
 
 /* ========================================
