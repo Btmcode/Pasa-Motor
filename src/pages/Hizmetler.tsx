@@ -1,19 +1,26 @@
 import Layout from "@/components/layout/Layout";
 import { Wrench, ShoppingBag, Package, Settings, Zap, ShieldCheck } from "lucide-react";
 import serviceImg from "@/assets/service.jpg";
+import SEOHead from "@/components/seo/SEOHead";
 
 const services = [
   { icon: ShoppingBag, title: "Motosiklet Satışı", desc: "TVS, Hero, Falcon ve Işıldar markalarının en güncel modellerini showroom'umuzda inceleyebilirsiniz. Kredi ve taksit seçenekleri mevcuttur." },
   { icon: Wrench, title: "Motor Servisi", desc: "Periyodik bakım, motor revizyon, debriyaj, şanzıman ve genel mekanik onarım hizmetleri sunuyoruz." },
-  { icon: Zap, title: "Elektrik & Elektronik", desc: "Aküden aydınlatmaya, CDI'den beyin arızalarına kadar tüm elektrik sorunlarını çözüyoruz." },
+  { icon: Zap, title: "Elektrik ve Elektronik", desc: "Aküden aydınlatmaya, CDI'den beyin arızalarına kadar tüm elektrik sorunlarını çözüyoruz." },
   { icon: Package, title: "Yedek Parça Satışı", desc: "Orijinal ve muadil yedek parçalar geniş stoğumuzda. Bulunmayan parçalar kısa sürede temin edilir." },
-  { icon: Settings, title: "Bakım & Onarım", desc: "Yağ değişimi, filtre, balata, zincir-dişli seti ve lastik değişimi gibi rutin bakım hizmetleri." },
+  { icon: Settings, title: "Bakım ve Onarım", desc: "Yağ değişimi, filtre, balata, zincir-dişli seti ve lastik değişimi gibi rutin bakım hizmetleri." },
   { icon: ShieldCheck, title: "Garanti Kapsamı", desc: "Yetkili bayii olarak tüm satış ve servis işlemlerimiz garanti kapsamında gerçekleştirilir." },
 ];
 
 const Hizmetler = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Hizmetler | Paşa Motor - Motosiklet Satış, Servis ve Yedek Parça"
+        description="Paşa Motor hizmetleri: TVS, Hero, Falcon, Işıldar satışı - motor servisi - elektrik onarımı - orijinal yedek parça - periyodik bakım. İstanbul Fatih'te yetkili servis."
+        canonical="https://pasamotor.com.tr/hizmetler"
+        keywords="motosiklet servis istanbul, motor bakım fatih, yedek parça istanbul, tvs servis, hero motor servis, yetkili motosiklet tamiri"
+      />
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -25,7 +32,6 @@ const Hizmetler = () => {
             </p>
           </div>
 
-          {/* Hero Image */}
           <div className="relative rounded-2xl overflow-hidden mb-16 max-w-4xl mx-auto">
             <img src={serviceImg} alt="Paşa Motor servis atölyesi" loading="lazy" width={800} height={600} className="w-full h-64 md:h-80 object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
@@ -41,7 +47,7 @@ const Hizmetler = () => {
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                   <service.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground mb-2">{service.title}</h3>
+                <h2 className="font-heading font-semibold text-lg text-foreground mb-2">{service.title}</h2>
                 <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
               </div>
             ))}

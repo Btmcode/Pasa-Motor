@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 import serviceImg from "@/assets/service.jpg";
+import SEOHead from "@/components/seo/SEOHead";
 
 const images = [
   { src: heroBg, title: "Showroom", category: "showroom" },
@@ -16,6 +17,12 @@ const Galeri = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Galeri | Paşa Motor - Showroom ve Servis Fotoğrafları"
+        description="Paşa Motor showroom ve servis atölyemize ait fotoğraflar. İstanbul Fatih'teki motosiklet mağazamızı ve teknik servis alanımızı keşfedin."
+        canonical="https://pasamotor.com.tr/galeri"
+        keywords="paşa motor galeri, motosiklet showroom istanbul, motosiklet servis atölyesi fatih"
+      />
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">

@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import SEOHead from "@/components/seo/SEOHead";
 
 const Iletisim = () => {
   const { toast } = useToast();
@@ -15,6 +16,13 @@ const Iletisim = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="İletişim | Paşa Motor - İstanbul Fatih Motosiklet Bayii"
+        description="Paşa Motor ile iletişime geçin. Adres: Kızılelma Cad. No:66/A K.M.Paşa Fatih/İstanbul. Tel: 0212 586 85 98. WhatsApp: 0534 899 68 17. Motosiklet satış ve servis."
+        canonical="https://pasamotor.com.tr/iletisim"
+        keywords="paşa motor iletişim, motosiklet bayii telefon, fatih motosiklet adres, istanbul motosiklet iletişim"
+      />
+
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">

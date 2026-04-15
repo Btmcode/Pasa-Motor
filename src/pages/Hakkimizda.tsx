@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Shield, Award, Users, Calendar } from "lucide-react";
+import SEOHead from "@/components/seo/SEOHead";
 
 const highlights = [
   { icon: Calendar, title: "20+ Yıllık Deneyim", desc: "Motosiklet sektöründe yılların verdiği tecrübe ve güvenle hizmet veriyoruz." },
@@ -11,6 +12,12 @@ const highlights = [
 const Hakkimizda = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Hakkımızda | Paşa Motor - İstanbul Fatih Motosiklet Yetkili Bayii"
+        description="Paşa Motor hakkında bilgi edinin. İstanbul Fatih'te 20 yılı aşkın deneyimiyle TVS, Hero, Falcon ve Işıldar yetkili bayisi. Nihat KAN liderliğinde uzman kadro."
+        canonical="https://pasamotor.com.tr/hakkimizda"
+        keywords="paşa motor hakkında, nihat kan, istanbul motosiklet bayii, fatih yetkili servis"
+      />
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
